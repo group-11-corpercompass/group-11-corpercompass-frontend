@@ -1,22 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-    --primary: #13a33e;
-    --secondary: gray;
+  --primary: #7ca263;
+  --fill: #b4b4b4;
+  --secondary: #d4d76d;
+  --text-color: #1f1f1f;
+  --bg-color: #fff;
 }
 
 body {
-    font-family: sans-serif;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Nav Menu Styling */
-
-/* Button Styling */
-.btn {
-  padding: 10px 8px;
-  border-radius: 8px;
-  border: none;
+h1 {
+  font-weight: bold;
 }
 
-.btn-primary {
-  background: var(--primary);
-  color: white;
+a {
+  text-decoration: none;
+  color: var(--text-color);
 }
+
+/* Side-Nav Menu Styling */
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 250px;
+  padding: 50px 0;
+}
+
+.side-menu a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 18px;
+  margin-left: 30px;
+  width: 200px;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.side-menu a i {
+  font-size: 24px;
+}
+
+.side-menu a.active {
+  background-color: var(--fill);
+}
+
+/* Top Nav Menu */
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px;
+}
+
+.top-menu a {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-menu .logo i {
+  font-size: 24px;
+}
+
+.top-menu-avatar,
+.top-menu-search {
+  display: flex;
+  align-items: center;
+}
+
+.top-menu-avatar p {
+  font-weight: bold;
+}
+
+.top-menu-search i {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+/* Top Nav Search Bar */
+.top-nav-search {
+  position: relative;
+  width: 500px;
+}
+
+.top-nav-search input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: var(--fill);
+}
+
+.top-nav-search i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Profile Avatar */
+.profile-head {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-head img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
