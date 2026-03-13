@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CorperCompass — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+  <!-- ── Page Shell ───────────────────────────────────────── -->
+  <div class="page-shell">
+
+    <!-- Top Nav -->
+    <nav class="top-menu">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-compass"></i>CorperCompass
+      </a>
+
+      <div class="top-menu-search">
+        <div class="top-nav-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" name="Search" id="search" placeholder="Search" />
+        </div>
+        <i class="fa-regular fa-bell top-bell"></i>
+      </div>
+
+      <div class="top-menu-avatar">
+        <div class="profile-head">
+          <img src="../assests_images/images/profile1.png" alt="profile" />
+        </div>
+        <p class="profile-name">Adaeze Okonkwo</p>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </nav>
+
+    <!-- ── Below Top Nav: sidebar + content ─────────────── -->
+    <div class="body-layout">
+
+      <!-- Side Menu -->
+      <nav class="side-menu">
+        <div class="side-menu-top">
+          <a href="home.html" class="active"><i class="fa-solid fa-house"></i> Dashboard</a>
+          <a href="map.html"><i class="fa-solid fa-earth-africa"></i> Map</a>
+          <a href="culture.html"><i class="fa-solid fa-book-open"></i> Culture Guide</a>
+          <a href="checklist.html"><i class="fa-regular fa-rectangle-list"></i> Checklist</a>
+          <a href="budget.html"><i class="fa-solid fa-wallet"></i> Budget Tracker</a>
+        </div>
+        <div class="side-menu-bottom">
+          <hr class="side-divider"/>
+          <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+          <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        </div>
+      </nav>
+
+      <!-- Main Dashboard Content -->
+      <main class="dashboard">
+
+        <!-- Welcome Header -->
+        <header class="welcome-header">
+          <div class="welcome-text">
+            <h1>Welcome back, Adaeze 👋</h1>
+            <p>Here's an overview of your NYSC service year</p>
+          </div>
+        </header>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar" aria-label="Service Statistics">
+
+          <article class="stat-card stat-clearance">
+            <span class="stat-label">Clearance Status</span>
+            <div class="stat-value cleared">
+              <span class="status-dot"></span>
+              Cleared
+            </div>
+          </article>
+
+          <div class="stat-divider" role="presentation"></div>
+
+          <article class="stat-card stat-cds">
+            <span class="stat-label">Next CDS Date</span>
+            <div class="stat-value">
+              <span class="stat-icon">📅</span>
+              March 8
+            </div>
+            <span class="stat-sub">Reminder enabled</span>
+          </article>
+
+          <div class="stat-divider" role="presentation"></div>
+
+          <article class="stat-card stat-days">
+            <span class="stat-label">Days Left in Service</span>
+            <div class="stat-value">
+              <span class="stat-icon">⏰</span>
+              182 Days
+            </div>
+            <span class="stat-sub">POP: December 2026</span>
+          </article>
+
+          <!-- Progress Ring -->
+          <aside class="completion-ring" aria-label="Service Completion Progress">
+            <p class="ring-title">Service Completion<br>Progress</p>
+            <div class="ring-wrapper">
+              <svg class="ring-svg" viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="ring-track" cx="60" cy="60" r="50"/>
+                <circle class="ring-fill" cx="60" cy="60" r="50"/>
+              </svg>
+              <span class="ring-percent">50%</span>
+            </div>
+          </aside>
+
+        </section>
+
+        <!-- Middle Grid -->
+        <section class="middle-grid">
+
+          <article class="card tasks-card">
+            <h2 class="card-title">Upcoming Tasks <span class="badge badge-done">✔</span></h2>
+            <ul class="task-list" role="list">
+              <li class="task-item">
+                <label class="task-label">
+                  <input type="checkbox" class="task-check" aria-label="Upload March Clearance"/>
+                  <span class="custom-check"></span>
+                  Upload March Clearance
+                </label>
+              </li>
+              <li class="task-item">
+                <label class="task-label">
+                  <input type="checkbox" class="task-check" aria-label="Attend CDS meeting"/>
+                  <span class="custom-check"></span>
+                  Attend CDS meeting
+                </label>
+              </li>
+              <li class="task-item">
+                <label class="task-label">
+                  <input type="checkbox" class="task-check" aria-label="Submit monthly report"/>
+                  <span class="custom-check"></span>
+                  Submit monthly report
+                </label>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card announcements-card">
+            <h2 class="card-title">Announcements <span class="exclaim">‼️</span></h2>
+            <ul class="announce-list" role="list">
+              <li class="announce-item"><span class="announce-dot"></span>NYSC allowance update</li>
+              <li class="announce-item"><span class="announce-dot"></span>Community development event</li>
+              <li class="announce-item"><span class="announce-dot"></span>Orientation tips</li>
+            </ul>
+          </article>
+
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline-section" aria-label="Service Year Timeline">
+          <h2 class="timeline-heading">Service Year Timeline</h2>
+
+          <nav class="timeline-steps" aria-label="NYSC stages">
+            <span class="step step-done">Camp</span>
+            <span class="step-arrow">→</span>
+            <span class="step step-done">First CDS</span>
+            <span class="step-arrow">→</span>
+            <span class="step step-active">Mid Service</span>
+            <span class="step-arrow">→</span>
+            <span class="step">POP</span>
+          </nav>
+
+          <div class="progress-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="50% complete">
+            <div class="progress-fill">
+              <span class="progress-label">50%</span>
+            </div>
+          </div>
+
+          <div class="timeline-dates">
+            <span class="date-label">
+              <small>Start Date:</small><br/>
+              <strong>January 2026</strong>
+            </span>
+            <span class="date-label date-right">
+              <small>Completion Date:</small><br/>
+              <strong>December 2026</strong>
+            </span>
+          </div>
+        </section>
+
+      </main>
+    </div><!-- /body-layout -->
+  </div><!-- /page-shell -->
+
+</body>
+</html>
