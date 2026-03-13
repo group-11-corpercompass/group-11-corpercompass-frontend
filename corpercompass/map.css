@@ -15,7 +15,8 @@
 body {
   font-family: "Inter", sans-serif;
   width: 100%;
-  overflow: hidden;
+  background-color: #e6e6e6;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -100,12 +101,13 @@ a {
 
 /* Side-Nav Menu Styling */
 .side-menu {
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   width: 250px;
-  margin: 30px 0;
+  padding-top: 50px;
 }
 
 .side-menu a {
@@ -132,4 +134,21 @@ a {
 }
 .side-menu a:hover {
     background-color: var(--fill);
+}
+
+
+.map-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  /* padding: 20px; */
+}
+
+.map-section #map {
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
 }

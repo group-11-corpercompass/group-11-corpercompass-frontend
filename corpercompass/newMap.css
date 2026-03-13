@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #7ca263;
+  --fill: #b4b4b4;
+  --secondary: #d4d76d;
+  --text-color: #1f1f1f;
+  --bg-color: #fff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  background-color: #e6e6e6;
+  /* overflow: hidden; */
+}
+
+h1 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+
+.controls {
+    margin: 20px;
+}

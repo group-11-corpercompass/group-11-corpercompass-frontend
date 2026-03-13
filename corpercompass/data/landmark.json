@@ -1,0 +1,44 @@
+{
+  "Kaduna": [
+    {
+      "name": "NYSC Orientation Camp",
+      "lat": 10.503,
+      "lng": 7.438,
+      "type": "camp",
+      "description": "Kaduna NYSC Camp"
+    }
+  ],
+
+  "Oyo": [
+    {
+      "name": "Bodija Market",
+      "lat": 7.43,
+      "lng": 3.9,
+      "type": "market"
+    }
+  ],
+  "Lagos": [
+    {
+      "name": "NYSC Orientation Camp",
+      "lat": 6.52,
+      "lng": 3.36,
+      "type": "nysc",
+      "description": "NYSC camp in Lagos"
+    },
+    {
+      "name": "Balogun Market",
+      "lat": 6.45,
+      "lng": 3.39,
+      "type": "market",
+      "description": "Major commercial market"
+    }
+  ],
+  "Rivers": [
+    {
+      "name": "NYSC Camp Nonwa",
+      "lat": 4.78,
+      "lng": 7.03,
+      "type": "nysc"
+    }
+  ]
+}
