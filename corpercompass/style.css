@@ -294,7 +294,7 @@
 .privacy-policy li:nth-child(n+2) {
     list-style: disc;
 }
-/* Second page */
+
 .wrapper{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -302,41 +302,53 @@ gap:20px;
 padding:40px;
 }
 
-/* cards */
-
 .card{
-background:#f4f4f4;
-padding:20px;
+background:#f5f5f5;
+padding:25px;
 border-radius:10px;
 }
-
-/* full width cards */
 
 .full{
 grid-column:1 / -1;
 }
 
-/* list layout */
+.description{
+margin:10px 0 20px 0;
+color:#555;
+line-height:1.5;
+}
 
-.list {
+.info-list{
 display:flex;
 flex-direction:column;
-margin-top:15px;
+position: relative;
+padding-left: 25px;
+display: flex;
+flex-direction: column;
+
 }
 
-/* item */
-
-.item {
-padding:10px 0;
+.info-item{
+display:flex;
+justify-content:space-between;
+padding:12px 0;
 }
 
-.item h4 {
-margin-bottom:5px;
+.info-list::before {
+content: "";
+position: absolute;
+left: 115px;
+top: 20px;
+bottom: 20px;
+right: 0;
+width: 2px;
+background: #0e0a0a;
 }
 
-/* divider */
+.label{
+font-weight:600;
+}
 
-.divider {
-height:1px;
-background:#ccc;
+.value{
+color:#555;
 }
