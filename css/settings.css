@@ -6,7 +6,7 @@
 
 :root {
   --primary: #7ca263;
-  --fill: #b4b4b4;
+  --fill: #f5f5f5;
   --secondary: #d4d76d;
   --text-color: #1f1f1f;
   --bg-color: #fff;
@@ -183,7 +183,9 @@ ul li {
   padding: 5px 0;
   color: #555;
 }
-
+.row:hover {
+  background-color: #f7f7f7;
+}
 .arrow {
   font-size: 20px;
   color: #aaa;
