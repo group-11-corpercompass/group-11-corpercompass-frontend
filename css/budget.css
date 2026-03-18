@@ -29,21 +29,12 @@
   --topnav-h:       68px;
   --sidebar-w:      260px;
 
-  --font:           'Sora', sans-serif;
+  --font:           'Inter', sans-serif;
   --r-nav:          12px;
   --r-btn:          12px;
   --r-input:        10px;
   --r-modal:        20px;
 }
-
-/* ══════════════════════════════════════════════════
-   DEMARCATIONS — every subtle border/gap in the design
-   ① top-menu border-bottom:     1px #E2E2E2  (nav ↔ content)
-   ② side-menu border-right:     1px #E2E2E2  (sidebar ↔ main)
-   ③ side-divider (top→bottom):  1px #E2E2E2  (nav group ↔ Profile/Settings)
-   ④ main section gap:           8px #F2F2F2  (allowance card ↔ expenses card)
-   ⑤ expense-row border-bottom:  1px #ECECEC  (between each expense line)
-══════════════════════════════════════════════════ */
 
 /* ══════════════════════════════════════════════════
    BASE

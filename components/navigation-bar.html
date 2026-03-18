@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nav Menu</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,55 +14,114 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <script src="/js/budget.js" defer></script>
   </head>
 
   <body>
-    <!-- Top Nav -->
+    <!-- ── TOP NAV ─────────────────────────────────── -->
     <nav class="top-menu">
-      <a href="#" class="logo"
-        ><i class="fa-solid fa-compass"></i>CorperCompass</a
+      <!-- Hamburger (mobile only — sits before logo) -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
       >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
+      <!-- Logo -->
+      <a href="home.html" class="logo">
+        <img src="/assests_images/images/Rectangle.png" alt="" />
+        <span>CorperCompass</span>
+      </a>
+
+      <!-- Search + bell -->
       <div class="top-menu-search">
         <div class="top-nav-search">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="search" name="Search" id="search" placeholder="Search" />
+          <input
+            type="search"
+            name="Search"
+            id="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
         </div>
-        <i class="fa-regular fa-bell"></i>
+        <button class="top-bell-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell top-bell"></i>
+        </button>
       </div>
 
+      <!-- Avatar + name -->
       <div class="top-menu-avatar">
         <div class="profile-head">
-          <img src="../assests_images/images/profile1.png" alt="profile" />
+          <img
+            src="/assests_images/images/profile1.png"
+            alt="Adaeze Okonkwo"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+
         </div>
         <p class="profile-name">Adaeze Okonkwo</p>
         <i class="fa-solid fa-angle-down"></i>
       </div>
     </nav>
 
-    <!-- Side Menu -->
-    <nav class="side-menu">
-      <a href="home.html" class="active"
-        ><i class="fa-solid fa-house"></i> Dashboard</a
-      >
-      <a href="map.html"><i class="fa-solid fa-earth-africa"></i> Map</a>
-      <a href="culture.html"
-        ><i class="fa-solid fa-book-open"></i> Culture Guide</a
-      >
-      <a href="checklist.html"
-        ><i class="fa-regular fa-rectangle-list"></i> Checklist</a
-      >
-      <a href="budget.html"
-        ><i class="fa-solid fa-wallet"></i> Budget Tracker</a
-      >
-      <hr />
-      <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
-      <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
-    </nav>
+    <!-- ── BELOW TOP NAV: sidebar + content ─────────── -->
+    <div class="body-layout">
+
+      <!-- Backdrop (mobile tap-to-close) -->
+      <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+      <!-- ── SIDE MENU ──────────────────────────────── -->
+      <nav class="side-menu" id="sideMenu" aria-label="Site navigation">
+
+        <div class="side-menu-top">
+          <a href="home.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="map.html">
+            <i class="fa-solid fa-earth-africa"></i>
+            <span>Map</span>
+          </a>
+          <a href="culture.html">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Culture Guide</span>
+          </a>
+          <a href="checklist.html">
+            <i class="fa-regular fa-rectangle-list"></i>
+            <span>Checklist</span>
+          </a>
+          <a href="budget.html" class="active">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Budget Tracker</span>
+          </a>
+        </div>
+
+        <div class="side-menu-bottom">
+          <hr class="side-divider" />
+          <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </a>
+          <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </a>
+        </div>
+
+      </nav>
+
+    </div>
+  </div>
   </body>
 </html>
