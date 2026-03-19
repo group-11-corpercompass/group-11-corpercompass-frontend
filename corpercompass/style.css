@@ -657,6 +657,7 @@ padding:40px;
 padding:14px 18px;
 border-radius:8px;
 border:1px solid #ddd;
+text-align: center;
 }
 
 /* repeating row colors */
@@ -665,14 +666,15 @@ border:1px solid #ddd;
 .language-table .cell:nth-child(12n + 2),
 .language-table .cell:nth-child(12n + 3),
 .language-table .cell:nth-child(12n + 4){
-background:#f8f9fa;
+background:#7CA263;
+color: #fff;
 }
 
 .language-table .cell:nth-child(12n + 5),
 .language-table .cell:nth-child(12n + 6),
 .language-table .cell:nth-child(12n + 7),
 .language-table .cell:nth-child(12n + 8){
-background:#e9f2ff;
+background:#BDD0B1;
 }
 
 .language-table .cell:nth-child(12n + 9),
@@ -680,4 +682,34 @@ background:#e9f2ff;
 .language-table .cell:nth-child(12n + 11),
 .language-table .cell:nth-child(12n + 12){
 background:#eef7f1;
+}
+
+.background {
+    height: 400px;
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.952), rgba(0,0,0,0)),
+    url("../assests_images/images/IMG_1307\ 1.png");
+
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 50px;
+    color: white;
+}
+
+.background h2 {
+    font-size: 50px;
+    font-weight: 700;
+    font-style: bold;
+}
+
+.background p {
+    width: 597px;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 36px;
+    color: #7CA263;
 }
