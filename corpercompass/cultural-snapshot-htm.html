@@ -8,6 +8,108 @@
 </head>
 <body>
 
+     <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome (matching CorperCompass home dashboard) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="nav-cc.css" />
+  <script defer src="nav-cc.js"></script>
+
+</head>
+<body>
+        <!-- ── TOP NAV ─────────────────────────────────── -->
+    <nav class="top-menu">
+
+      <!-- Hamburger (mobile only — sits before logo) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="home.html" class="logo">
+        <i class="fa-solid fa-compass"></i>
+        <span>CorperCompass</span>
+      </a>
+
+      <!-- Search + bell -->
+      <div class="top-menu-search">
+        <div class="top-nav-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" name="Search" id="search" placeholder="Search" aria-label="Search" />
+        </div>
+        <button class="top-bell-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell top-bell"></i>
+        </button>
+      </div>
+
+      <!-- Avatar + name -->
+      <div class="top-menu-avatar">
+        <div class="profile-head">
+          <img src="../assets_images/images/profile1.png"
+               alt="Adaeze Okonkwo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <!-- SVG fallback when image is missing -->
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="display:none;width:100%;height:100%">
+            <rect width="40" height="40" fill="#C4956A"/>
+            <ellipse cx="20" cy="15" rx="8" ry="9" fill="#9B6B47"/>
+            <ellipse cx="20" cy="36" rx="15" ry="11" fill="#7A5135"/>
+          </svg>
+        </div>
+        <p class="profile-name">Adaeze Okonkwo</p>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+
+    </nav>
+
+    <!-- ── BELOW TOP NAV: sidebar + content ─────────── -->
+    <div class="body-layout">
+
+      <!-- Backdrop (mobile tap-to-close) -->
+      <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+      <!-- ── SIDE MENU ──────────────────────────────── -->
+      <nav class="side-menu" id="sideMenu" aria-label="Site navigation">
+
+        <div class="side-menu-top">
+          <a href="home.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="map.html">
+            <i class="fa-solid fa-earth-africa"></i>
+            <span>Map</span>
+          </a>
+          <a href="culture.html">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Culture Guide</span>
+          </a>
+          <a href="checklist.html">
+            <i class="fa-regular fa-rectangle-list"></i>
+            <span>Checklist</span>
+          </a>
+          <a href="budget.html" class="active">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Budget Tracker</span>
+          </a>
+        </div>
+
+        <div class="side-menu-bottom">
+          <hr class="side-divider" />
+          <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </a>
+          <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </a>
+        </div>
+
+      </nav>
+
     <header class="main-header">
 
         <nav class="left-menu">
