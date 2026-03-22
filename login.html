@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
+    <script src="js/login.js" defer></script>
     <link rel="stylesheet" href="/css/login.css" />
     <link
       type="image/png"
@@ -35,7 +36,9 @@
     <script src="assets/js/login.js" defer></script>
 
   </head>
+
   <body>
+
     <div class="container" id="logIn">
       <div class="image-container">
         <img src="assets/images/Image copper.png" alt="" />
@@ -47,13 +50,13 @@
           <p>Join CorperCompass to relocate confidently</p>
         </div>
 
-        <form class="form-section">
+        <form class="form-section" id="loginForm">
           <div class="form-group">
-            <input type="email" placeholder="@email.com" required />
+            <input type="email" id="email" placeholder="@email.com" required />
             <div class="form-group-icon"><i class="fa fa-envelope-o"></i></div>
           </div>
           <div class="form-group">
-            <input type="password" placeholder="Password" required />
+            <input type="password" id="password" placeholder="Password" required />
             <div class="form-group-icon"><i class="fa fa-lock"></i></div>
           </div>
 
@@ -84,5 +87,15 @@
         </form>
       </div>
     </div>
+
+    <script type="module">
+
+      import { checkAuth, logout } from "./auth.js";
+
+      checkAuth();
+
+      document.getElementById("logoutBtn").addEventListener("click", logout);
+
+    </script>
   </body>
 </html>
