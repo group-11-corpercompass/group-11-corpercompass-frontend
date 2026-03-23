@@ -3,20 +3,44 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* body {
-  background-color: black;
-} */
-.wrapper {
-  background-color: #fff;
-  max-width: 1440px;
-  margin: 2rem auto;
+
+:root {
+  --primary: #7ca263;
+  --fill: #f5f5f5;
+  --secondary: #d4d76d;
+  --text-color: #1f1f1f;
+  --bg-color: #fff;
 }
+
+body {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  background-color: #e6e6e6;
+  /* overflow: hidden; */
+}
+
+h1 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul li {
+  list-style: none;
+}
+
 /* NAV */
 .nav {
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  padding: 1rem;
+  display: flex;
+  margin-left: 240px;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 1px solid var(--text-color);
 }
+
 .search,
 .logo-container,
 .user {
@@ -24,6 +48,7 @@
   align-items: center;
   gap: 15px;
 }
+
 .search input {
   width: 555px;
   height: 34px;
@@ -32,29 +57,66 @@
   padding: 5px;
 }
 
-/* ASIDE */
-aside div {
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #fff;
+  padding: 10px;
   display: flex;
-  /* justify-content: center; */
+  flex-direction: column;
+  align-items: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar .logo {
+  display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
-aside div:hover {
-  background-color: black;
-  width: 250px;
-  color: white;
-  border-radius: 10px;
+
+.sidebar .logo img {
+  margin-right: 10px;
 }
-.main {
-  display: grid;
-  grid-template-columns: 2fr 6fr;
+
+.sidebar ul {
+  margin-top: 50px;
 }
+
+.sidebar i {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+  background-color: var(--fill);
+}
+
+.housing-wrapper {
+  position: absolute;
+  left: 250px;
+  right: 0;
+  width: auto;
+}
+
 .housing-card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin: 20px;
 }
+
 .details {
   background-color: #419b45;
   border-radius: 10px;
@@ -73,17 +135,12 @@ aside div:hover {
   padding-bottom: 10px;
   border: 1px solid green;
 }
+
 .map {
   width: 16px;
   height: 20px;
   margin-bottom: -5px;
   margin-right: 10px;
-}
-.housing-card-container {
-  max-width: 880px;
-  /* height: 658px; */
-  position: relative;
-  margin: 3rem 0 5rem;
 }
 
 .more {
@@ -97,11 +154,13 @@ aside div:hover {
   padding: 10px 50px;
   margin: 1rem 0 0 0;
 }
+
 .housing-heading {
-  width: 880px;
+  margin: 20px;
   display: flex;
   justify-content: space-between;
 }
+
 .sort {
   display: flex;
   gap: 70px;
