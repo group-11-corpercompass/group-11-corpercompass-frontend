@@ -35,7 +35,7 @@ if(data.success){
 
 alert("Registration successful");
 
-window.location.href = "login.html";
+window.location.href = "dashboard.html";
 
 }else{
 
