@@ -1,9 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
-
-const form = document.getElementById("form-section");
-const error = document.getElementById("error");
-
-form.addEventListener("submit", async function(e){
+document.getElementById("form-section").addEventListener("submit", async function(e){
 
 e.preventDefault();
 
@@ -13,44 +8,47 @@ const password = document.getElementById("password").value;
 
 try{
 
-const response = await fetch("https://corper-compass-backend-production.up.railway.app/api/auth/register", {
-
-method: "POST",
+const response = await fetch(
+"https://corper-compass-backend-production.up.railway.app/api/register",
+{
+method:"POST",
 
 headers:{
 "Content-Type":"application/json"
 },
 
-body: JSON.stringify({
-name: name,
-email: email,
-password: password
+body:JSON.stringify({
+name,
+email,
+password,
+role:"corper"
 })
-
-});
+}
+);
 
 const data = await response.json();
 
-if(data.success){
+console.log(data);
 
-alert("Registration successful");
+if(response.ok){
 
+// save login token
+localStorage.setItem("token", data.token);
+
+// redirect to dashboard
 window.location.href = "dashboard.html";
 
 }else{
 
-error.textContent = data.message || "Registration failed";
+alert(data.message || "Registration failed");
 
 }
 
-}catch(err){
+}catch(error){
 
-console.error(err);
-
-error.textContent = "Server error";
+console.error(error);
+alert("Server error");
 
 }
-
-});
 
 });
