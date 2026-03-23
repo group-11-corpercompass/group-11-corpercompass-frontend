@@ -1,96 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Checklist</title>
-  <link rel="stylesheet" href="Checklist.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Checklist</title>
+    <link rel="stylesheet" href="assets/css/checklist.css" />
+    <script src="assets/js/checklist.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <a href="index.html" class="logo"
+          ><img src="/assets/images/Rectangle.png" alt="" />CorperCompass</a
+        >
+        <ul>
+          <li>
+            <a href="dashboard.html"
+              ><i class="fa-solid fa-house"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="map.html"><i class="fa-solid fa-earth-africa"></i> Map</a>
+          </li>
+          <li>
+            <a href="culture.html"
+              ><i class="fa-solid fa-book-open"></i> Culture Guide</a
+            >
+          </li>
+          <li>
+            <a href="housing.html" target="_parent">
+              <i class="fa-solid fa-house"></i>Housing</a
+            >
+          </li>
+          <li class="active">
+            <a href="checklist.html"
+              ><i class="fa-regular fa-rectangle-list"></i> Checklist</a
+            >
+          </li>
+          <li>
+            <a href="budget.html"
+              ><i class="fa-solid fa-wallet"></i> Budget Tracker</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a href="settings.html"
+              ><i class="fa-solid fa-gear"></i> Settings</a
+            >
+          </li>
+        </ul>
+      </aside>
 
-<script src="checklist.js" defer></script>
-</head>
-<body>
-
-<div class="container">
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2 class="logo">CorperCompass </h2>
-  <ul>
-      <li><i class="fa-solid fa-house"></i>Dashboard</li>
-      <li><i class="fa-solid fa-earth-africa"></i>Map</li>
-      <li><i class="fa-solid fa-book-open"></i>Culture Guide</li>
-      <li><i class="fa-solid fa-house"></i>Housing</li>
-      <li class="active"> <i class="fa-regular fa-rectangle-list"></i>Checklist</li>
-      <li> <i class="fa-solid fa-wallet"></i>Budget Tracker</li>
-<hr>
-<li><i class="fa-solid fa-user"></i>Profile</li>
-      <li><i class="fa-solid fa-gear"></i>Settings</li>
-    </ul>
-  </aside>
-
-  <!-- Main Content -->
-  <div class="content">
-
-    <!-- Top Bar -->
-    <div class="topbar">
-<span class="menu-toggle" id="menuToggle">☰</span>
-      <input type="text" placeholder="Search..." class="search">
-
-      <input type="text" placeholder="Search..." class="search">
-
-      <div class="top-right">
-        🔔
-        <div class="profile">
-          <img src="https://i.pravatar.cc/40" alt="">
-          <span>Adaeze Okonkwo</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Grid -->
-    <div class="main-grid">
-
-      <!-- Left Section -->
-      <div class="left">
-
-        <h1>Welcome back, Adaeze 👋</h1>
-        <p>Here’s what you’ve achieved so far</p>
-
-        <!-- Completed -->
-        <div class="card">
-          <h3>Tasks Completed</h3>
-          <ul id="completedTasks"></ul>
-        </div>
-
-        <!-- Upcoming -->
-        <div class="card">
-          <h3>Upcoming Tasks</h3>
-          <ul id="upcomingTasks"></ul>
-        </div>
-
-        <button id="addTask">Add Custom Task</button>
-
-      </div>
-
-      <!-- Right Section -->
-      <div class="right">
-
-        <div class="progress-card">
-          <h3>Task Completed Progress</h3>
-
-          <div class="progress-circle">
-            <span id="progressText">65%</span>
+      <!-- Main Content -->
+      <div class="content">
+        <!-- Top Bar -->
+        <div class="topbar">
+          <span class="menu-toggle" id="menuToggle">☰</span>
+          <input type="text" placeholder="Search..." class="search" />
+          <i class="fa-regular fa-bell"></i>
+          <div class="top-right">
+            <div class="profile">
+              <img src="/assets/images/profile1.png" alt="" />
+            </div>
+            <p class="profile-name">Adaeze Okonkwo</p>
+            <i class="fa-solid fa-angle-down"></i>
           </div>
         </div>
 
-        <button class="share-btn">📤 Share your Progress</button>
+        <!-- Main Grid -->
+        <div class="main-grid">
+          <!-- Left Section -->
+          <div class="left">
+            <h1>Welcome back, Adaeze 👋</h1>
+            <p>Here’s what you’ve achieved so far</p>
 
-  </div>
+            <!-- Completed -->
+            <div class="card">
+              <h3>Tasks Completed</h3>
+              <ul id="completedTasks"></ul>
+            </div>
 
+            <!-- Upcoming -->
+            <div class="card">
+              <h3>Upcoming Tasks</h3>
+              <ul id="upcomingTasks"></ul>
+            </div>
+
+            <button id="addTask">Add Custom Task</button>
+          </div>
+
+          <!-- Right Section -->
+          <div class="right">
+            <div class="progress-card">
+              <h3>Task Completed Progress</h3>
+
+              <div class="progress-circle">
+                <span id="progressText">65%</span>
+              </div>
+            </div>
+
+            <button class="share-btn">📤 Share your Progress</button>
+          </div>
+        </div>
+      </div>
     </div>
-
-  </div>
-
-</div>
-</body>
-  </html>
+  </body>
+</html>
