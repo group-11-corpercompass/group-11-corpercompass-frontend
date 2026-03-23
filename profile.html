@@ -1,159 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Profile</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Profile</title>
+    <link rel="stylesheet" href="assets/css/profile.css" />
+    <script src="assets/js/profile.js" defer></script>
+  </head>
 
-<link rel="stylesheet" href="/css/profile.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/profile.css"/>
-<script src="assets/js/profile.js"></script>
-</head>
-
-<body>
-
-<div class="container">
-
-  <!-- Sidebar -->
-  <nav class="side-menu">
-
-    <div class="logo">
-      <img src="assets/images/Rectangle.png" alt="">
-      <a href="index.html"><span>CorperCompass</span></a>
-    </div>
-
-    <div class="menu-links">
-      <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
-      <a href="map.html"><i class="fa-solid fa-earth-africa"></i> Map</a>
-      <a href="culture.html"><i class="fa-solid fa-book-open"></i> Culture Guide</a>
-      <a href="housing.html" target="_blank"> <i class="fa-solid fa-house" ></i>Housing</a>
-      <a href="checklist.html"><i class="fa-regular fa-rectangle-list"></i> Checklist</a>
-      <a href="budget.html"><i class="fa-solid fa-wallet"></i> Budget Tracker</a>
-    </div>
-
-    <hr>
-
-    <div class="menu-links">
-      <a href="profile.html" class="active"><i class="fa-solid fa-user"></i> Profile</a>
-      <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
-    </div>
-
-  </nav>
-
-
-  <!-- Main Content -->
-  <main class="main-content">
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-
-      <div class="search-box">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search">
-      </div>
-
-      <div class="user-info">
-        <i class="fa-regular fa-bell"></i>
-        <img src="assets/images/profile1.png" class="avatar">
-        <span>Adaeze Okonkwo</span>
-      </div>
-
-    </div>
-
-
-    <h1>Profile</h1>
-    <p class="subtitle">Manage your personal and NYSC service information</p>
-
-
-    <!-- Profile Card -->
-    <div class="profile-card">
-
-      <img src="assets/images/Ellipse 1.png" class="profile-pic">
-
-      <div>
-        <h3>Adaeze Okonkwo</h3>
-        <p>FCT Corps Member</p>
-        <p>Batch A Stream 2</p>
-        <button>Edit Profile</button>
-      </div>
-
-    </div>
-
-
-    <!-- Info Cards  -->
-    <div class="info-section">
-
-      <!-- Personal Info -->
-      <div class="card">
-
-        <div class="card-header">
-          <h3>Personal Information</h3>
-          <span class="edit">[Edit]</span>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="side-menu">
+        <div class="logo">
+          <img src="assets/images/Rectangle.png" alt="" />
+          <a href="index.html"><span>CorperCompass</span></a>
         </div>
 
-        <div class="info-grid">
-          <span>Full Name</span><span>Adaeze Okonkwo</span>
-          <span>Email Address </span><span>adaeze24@gmail.com</span>
-          <span>Phone Number </span><span>08012345678</span>
-          <span>Gender</span> <span>Female</span>
-          <span>Date of Birth</span><span>10/06/2000</span>
+        <div class="top menu-links">
+          <a href="dashboard.html"
+            ><i class="fa-solid fa-house"></i> Dashboard</a
+          >
+          <a href="map.html"><i class="fa-solid fa-earth-africa"></i> Map</a>
+          <a href="culture.html"
+            ><i class="fa-solid fa-book-open"></i> Culture Guide</a
+          >
+          <a href="housing.html"> <i class="fa-solid fa-house"></i>Housing</a>
+          <a href="checklist.html"
+            ><i class="fa-regular fa-rectangle-list"></i> Checklist</a
+          >
+          <a href="budget.html"
+            ><i class="fa-solid fa-wallet"></i> Budget Tracker</a
+          >
         </div>
 
-      </div>
+        <hr />
 
+        <div class="menu-links">
+          <a href="profile.html" class="active"
+            ><i class="fa-solid fa-user"></i> Profile</a
+          >
+          <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        </div>
+      </nav>
 
-      <!-- NYSC Info -->
-      <div class="card">
-
-        <div class="card-header">
-          <h3>NYSC Service Information</h3>
-          <span class="edit">[Edit]</span>
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <i class="fa-regular fa-bell"></i>
+          <div class="user-info">
+            <img src="assets/images/profile1.png" class="avatar" />
+            <span>Adaeze Okonkwo</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
         </div>
 
-        <div class="info-grid">
-          <span>State Code</span><span>FCT/248/1234</span>
-          <span>Batch</span><span>Batch A Stream 2</span>
-          <span>Deployment State</span><span>FCT</span>
-          <span>LGA</span><span>Gwagwalada</span>
-          <span>PPA</span><span>Government Secondary School Gwagwalada</span>
+        <h1>Profile</h1>
+        <p class="subtitle">
+          Manage your personal and NYSC service information
+        </p>
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+          <img src="assets/images/Ellipse 1.png" class="profile-pic" />
+
+          <div>
+            <h2>Adaeze Okonkwo</h2>
+            <p>FCT Corps Member</p>
+            <p>Batch A Stream 2</p>
+            <button class="profile-card-btn">Edit Profile</button>
+          </div>
         </div>
 
-      </div>
+        <!-- Info Cards  -->
+        <div class="info-section">
+          <!-- Personal Info -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Personal Information</h3>
+              <span class="edit">[Edit]</span>
+            </div>
 
+            <div class="info-grid">
+              <span>Full Name</span><span>Adaeze Okonkwo</span>
+              <span>Email Address </span><span>adaeze24@gmail.com</span>
+              <span>Phone Number </span><span>08012345678</span>
+              <span>Gender</span> <span>Female</span> <span>Date of Birth</span
+              ><span>10/06/2000</span>
+            </div>
+          </div>
+
+          <!-- NYSC Info -->
+          <div class="card">
+            <div class="card-header">
+              <h3>NYSC Service Information</h3>
+              <span class="edit">[Edit]</span>
+            </div>
+
+            <div class="info-grid">
+              <span>State Code</span><span>FCT/248/1234</span> <span>Batch</span
+              ><span>Batch A Stream 2</span> <span>Deployment State</span
+              ><span>FCT</span> <span>LGA</span><span>Gwagwalada</span>
+              <span>PPA</span
+              ><span>Government Secondary School Gwagwalada</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Account Settings -->
+        <div class="settings-card">
+          <h3>Account Settings</h3>
+
+          <div class="setting-item">
+            <span>Change Password</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="setting-item">
+            <span>Notification Preferences</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="setting-item">
+            <span>Privacy Settings</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="setting-item">
+            <span>Log Out</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </main>
     </div>
-
-
-    <!-- Account Settings -->
-    <div class="settings-card">
-
-      <h3>Account Settings</h3>
-
-      <div class="setting-item">
-        <span>Change Password</span>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-
-      <div class="setting-item">
-        <span>Notification Preferences</span>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-
-      <div class="setting-item">
-        <span>Privacy Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-
-      <div class="setting-item">
-        <span>Log Out</span>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-
-    </div>
-
-  </main>
-
-</div>
-
-</body>
+  </body>
 </html>
