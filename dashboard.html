@@ -113,7 +113,7 @@
 
         <!-- Welcome -->
         <header class="welcome-header">
-          <h1>Welcome back, Adaeze 👋</h1>
+          <h1>Welcome back, <span id="username"></span> 👋</h1>
           <p>Here's an overview of your NYSC service year</p>
         </header>
 
@@ -240,5 +240,17 @@
     </div><!-- /body-layout -->
   </div><!-- /page-shell -->
 
+  <script>
+
+    const token = localStorage.getItem("token");
+
+    if(!token){
+    window.location.href = "login.html";
+    }
+
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    document.getElementById("username").textContent = user.name;
+  </script>
 </body>
 </html>
