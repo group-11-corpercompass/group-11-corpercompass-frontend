@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
-    <link rel="stylesheet" href="/css/login.css">
+
     <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-google-color-16.png"> <meta name="msapplication-square70x70logo" content=".../icons8-google-color-70.png"> <meta name="msapplication-TileImage" content=".../icons8-google-color-144.png"> <meta name="msapplication-square150x150logo" content=".../icons8-google-color-150.png"> <meta name="msapplication-square310x310logo" content=".../icons8-google-color-310.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="assets/css/login.css">
@@ -35,11 +35,13 @@
                         </div>
                         <div class="form-group">
                             <input type="password" id="password" placeholder="Password" required>
-                            <div class="form-group-icon"> <i class="fa fa-lock"></i></div>
+                            <div class="form-group-icon"> <i class="fa fa-lock"></i></div>    
                         </div>
+
                         <div class="form-group">
-                            <input type="password" placeholder="Confirm Password" required>
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
                             <div class="form-group-icon"> <i class="fa fa-lock"></i></div>
+                            <p id="passwordError"></p>
                         </div>
             
                         
