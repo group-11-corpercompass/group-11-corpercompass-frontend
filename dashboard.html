@@ -284,15 +284,6 @@
     </div>
     <!-- /page-shell -->
 
-    <script>
-      const token = localStorage.getItem("token");
-
-      if (!token) {
-        window.location.href = "login.html";
-      }
-
-      const user = JSON.parse(localStorage.getItem("user"));
-      document.getElementById("username").textContent = user.name;
-    </script>
+   
   </body>
 </html>
