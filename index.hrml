@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorperCompass - Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav></nav>
+    <main>
+        <h1>Welcome to CorperCompass</h1>
+        <p>Your trusted guide for NYSC relocation. Find safe lodges, budget wisely, and connect with fellow corpers.</p>
+        <div class="card">
+            <h2>Get Started</h2>
+            <p>Explore areas, lodges, and plan your relocation journey.</p>
+            <a href="/areas.html" class="btn">Browse Areas</a>
+            <a href="/lodges.html" class="btn">View Lodges</a>
+            <a href="/budget.html" class="btn">Budget Estimator</a>
+        </div>
+    </main>
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>
