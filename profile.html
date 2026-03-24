@@ -65,7 +65,7 @@
           <i class="fa-regular fa-bell"></i>
           <div class="user-info">
             <img src="assets/images/profile1.png" class="avatar" />
-            <span>Adaeze Okonkwo</span>
+            <span class="profile"></span>
             <i class="fa-solid fa-angle-down"></i>
           </div>
         </div>
@@ -80,7 +80,7 @@
           <img src="assets/images/Ellipse 1.png" class="profile-pic" />
 
           <div>
-            <h2>Adaeze Okonkwo</h2>
+            <h2 class="profile"></h2>
             <p>FCT Corps Member</p>
             <p>Batch A Stream 2</p>
             <button class="profile-card-btn">Edit Profile</button>
@@ -97,7 +97,7 @@
             </div>
 
             <div class="info-grid">
-              <span>Full Name</span><span>Adaeze Okonkwo</span>
+              <span>Full Name</span><span class="profile"></span>
               <span>Email Address </span><span>adaeze24@gmail.com</span>
               <span>Phone Number </span><span>08012345678</span>
               <span>Gender</span> <span>Female</span> <span>Date of Birth</span
@@ -148,5 +148,12 @@
         </div>
       </main>
     </div>
+
+    <script>
+
+      const user = JSON.parse(localStorage.getItem("user"));
+      document.querySelector(".profile").textContent = user.name;
+
+    </script>
   </body>
 </html>
