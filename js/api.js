@@ -1,77 +1,49 @@
-const BASE_URL = "https://corper-compass-backend-production.up.railway.app/api"; 
+const config = require('./env');
 
+const API_BASE = config.API_BASE;
 
-// REGISTER USER
-export async function registerUser(userData) {
-
-  try {
-
-    const response = await fetch(`${BASE_URL}/auth/register`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(userData)
-    });
-
-    const data = await response.json();
-
-    return data;
-
-  } catch (error) {
-    console.error("Registration error:", error);
-  }
-
+function getToken() {
+  return localStorage.getItem('token');
 }
 
-
-
-// LOGIN USER
-export async function loginUser(email, password) {
-
-  try {
-
-    const response = await fetch(`${BASE_URL}/auth/register`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password
-      })
-    });
-
-    const data = await response.json();
-
-    return data;
-
-  } catch (error) {
-    console.error("Login error:", error);
-  }
-
+function setToken(token) {
+  localStorage.setItem('token', token);
 }
 
-
-
-// FETCH CURRENT USER
-export async function getUser(token) {
-
-  try {
-
-    const response = await fetch(`${BASE_URL}/api`, {
-      method: "GET",
-      headers: {
-        "Authorization": `Bearer ${token}`
-      }
-    });
-
-    const data = await response.json();
-
-    return data;
-
-  } catch (error) {
-    console.error("Fetch user error:", error);
-  }
-
+function removeToken() {
+  localStorage.removeItem('token');
 }
+
+async function request(endpoint, options = {}) {
+  const url = `${API_BASE}${endpoint}`;
+  const headers = {
+    'Content-Type': 'application/json',
+    ...(options.headers || {}),
+  };
+  const token = getToken();
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+  const config = { ...options, headers };
+  const response = await fetch(url, config);
+  let data;
+  try {
+    data = await response.json();
+  } catch (e) {
+    data = { message: 'Invalid response from server' };
+  }
+  if (!response.ok) {
+    throw new Error(data.message || 'Request failed');
+  }
+  return data;
+}
+
+module.exports = {
+  get: (endpoint) => request(endpoint, { method: 'GET' }),
+  post: (endpoint, body) => request(endpoint, { method: 'POST', body: JSON.stringify(body) }),
+  put: (endpoint, body) => request(endpoint, { method: 'PUT', body: JSON.stringify(body) }),
+  patch: (endpoint, body) => request(endpoint, { method: 'PATCH', body: JSON.stringify(body) }),
+  delete: (endpoint) => request(endpoint, { method: 'DELETE' }),
+  setToken,
+  removeToken,
+};
