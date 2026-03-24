@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorperCompass - Messages</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav></nav>
+    <main>
+        <h1>Messages</h1>
+        <div class="messages-container" style="display: flex; gap: 2rem;">
+            <div class="conversations-list" style="width: 30%;">
+                <h3>Conversations</h3>
+                <ul id="conversations-list"></ul>
+            </div>
+            <div class="chat-view" style="width: 70%;">
+                <div id="chat-header"></div>
+                <div id="chat-messages" style="height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 1rem;"></div>
+                <form id="message-form">
+                    <input type="text" id="message-content" placeholder="Type your message...">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>
