@@ -1,17 +1,11 @@
-import config from '../env.js';
+const config = require('../env');
 
 let map;
 let markers = [];
 let heatmap;
 let geocoder;
 
-/**
- * Initialize a Google Map on a given container.
- * @param {string} containerId - DOM element ID where the map will be placed.
- * @param {Object} options - { showMarkers, showHeatmap, center, zoom }
- * @returns {Promise<{map: Object, setCenter: Function, geocoder: Object}>}
- */
-export async function initGoogleMap(containerId, options = {}) {
+async function initGoogleMap(containerId, options = {}) {
   const { showMarkers = true, showHeatmap = false, center = { lat: 9.082, lng: 8.6753 }, zoom = 6 } = options;
 
   await loadGoogleMapsAPI();
@@ -39,10 +33,6 @@ export async function initGoogleMap(containerId, options = {}) {
   };
 }
 
-/**
- * Load the Google Maps JavaScript API.
- * @returns {Promise<void>}
- */
 function loadGoogleMapsAPI() {
   return new Promise((resolve, reject) => {
     if (window.google && window.google.maps) {
@@ -59,10 +49,7 @@ function loadGoogleMapsAPI() {
   });
 }
 
-/**
- * Load markers (areas and lodges) from the backend and add them to the map.
- */
-export async function loadMarkers() {
+async function loadMarkers() {
   const response = await fetch(`${config.API_BASE}/map/markers`);
   const data = await response.json();
   data.forEach(item => {
@@ -81,10 +68,7 @@ export async function loadMarkers() {
   });
 }
 
-/**
- * Load heatmap data (rent‑based weights) and add a heatmap layer.
- */
-export async function loadHeatmap() {
+async function loadHeatmap() {
   const response = await fetch(`${config.API_BASE}/map/heatmap`);
   const data = await response.json();
   const heatmapData = data.map(point => ({
@@ -97,26 +81,16 @@ export async function loadHeatmap() {
   });
 }
 
-/**
- * Clear all markers from the map.
- */
-export function clearMarkers() {
+function clearMarkers() {
   markers.forEach(m => m.setMap(null));
   markers = [];
 }
 
-/**
- * Clear the heatmap layer.
- */
-export function clearHeatmap() {
+function clearHeatmap() {
   if (heatmap) heatmap.setMap(null);
 }
 
-/**
- * Geocode a location string using Google Geocoding API and zoom the map to it.
- * @param {string} query - location name (e.g., "Lagos State, Nigeria")
- */
-export function geocodeAndZoom(query) {
+function geocodeAndZoom(query) {
   return new Promise((resolve, reject) => {
     geocoder.geocode({ address: query }, (results, status) => {
       if (status === 'OK' && results[0]) {
@@ -130,7 +104,6 @@ export function geocodeAndZoom(query) {
   });
 }
 
-// Helper to escape HTML in popups
 function escapeHtml(str) {
   if (!str) return '';
   return str.replace(/[&<>]/g, function(m) {
@@ -140,3 +113,12 @@ function escapeHtml(str) {
     return m;
   });
 }
+
+module.exports = {
+  initGoogleMap,
+  loadMarkers,
+  loadHeatmap,
+  clearMarkers,
+  clearHeatmap,
+  geocodeAndZoom,
+};
