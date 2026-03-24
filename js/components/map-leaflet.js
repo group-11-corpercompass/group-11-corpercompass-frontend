@@ -1,16 +1,10 @@
-import config from '../env.js';
+const config = require('../env');
 
 let map;
 let markers = [];
 let heatLayer;
 
-/**
- * Initialize a Leaflet map on a given container.
- * @param {string} containerId - DOM element ID where the map will be placed.
- * @param {Object} options - { showMarkers, showHeatmap, center, zoom }
- * @returns {Promise<{map: Object, setView: Function}>}
- */
-export async function initLeafletMap(containerId, options = {}) {
+async function initLeafletMap(containerId, options = {}) {
   const { showMarkers = true, showHeatmap = false, center = [9.082, 8.6753], zoom = 6 } = options;
 
   map = L.map(containerId).setView(center, zoom);
@@ -33,10 +27,7 @@ export async function initLeafletMap(containerId, options = {}) {
   };
 }
 
-/**
- * Load markers (areas and lodges) from the backend and add them to the map.
- */
-export async function loadMarkers() {
+async function loadMarkers() {
   const response = await fetch(`${config.API_BASE}/map/markers`);
   const data = await response.json();
   data.forEach(item => {
@@ -46,39 +37,26 @@ export async function loadMarkers() {
   });
 }
 
-/**
- * Load heatmap data (rent‑based weights) and add a heatmap layer.
- */
-export async function loadHeatmap() {
+async function loadHeatmap() {
   const response = await fetch(`${config.API_BASE}/map/heatmap`);
   const data = await response.json();
   const heatData = data.map(p => [p.lat, p.lng, p.weight]);
   heatLayer = L.heatLayer(heatData, { radius: 25, blur: 15, maxZoom: 17 }).addTo(map);
 }
 
-/**
- * Clear all markers from the map.
- */
-export function clearMarkers() {
+function clearMarkers() {
   markers.forEach(m => map.removeLayer(m));
   markers = [];
 }
 
-/**
- * Clear the heatmap layer.
- */
-export function clearHeatmap() {
+function clearHeatmap() {
   if (heatLayer) map.removeLayer(heatLayer);
 }
 
-/**
- * Geocode a location string using Nominatim and zoom the map to it.
- * @param {string} query - location name (e.g., "Lagos State, Nigeria")
- */
-export async function geocodeAndZoom(query) {
+async function geocodeAndZoom(query) {
   const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1`;
   const response = await fetch(url, {
-    headers: { 'User-Agent': 'CorperCompass' } // Required by Nominatim
+    headers: { 'User-Agent': 'CorperCompass' }
   });
   const data = await response.json();
   if (data.length > 0) {
@@ -93,7 +71,6 @@ export async function geocodeAndZoom(query) {
   }
 }
 
-// Helper to escape HTML in popups
 function escapeHtml(str) {
   if (!str) return '';
   return str.replace(/[&<>]/g, function(m) {
@@ -103,3 +80,12 @@ function escapeHtml(str) {
     return m;
   });
 }
+
+module.exports = {
+  initLeafletMap,
+  loadMarkers,
+  loadHeatmap,
+  clearMarkers,
+  clearHeatmap,
+  geocodeAndZoom,
+};
