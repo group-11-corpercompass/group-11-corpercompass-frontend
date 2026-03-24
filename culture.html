@@ -1,124 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="/css/culture.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
-    rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/culture.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Culture & Language </title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/assets/css/culture.css">
+    <script src="/assets/js/culture.js" defer></script>
 </head>
 <body>
-    <nav >
-        <ul class="nav-bar">
-            <li>States Guide</li>
-            <li>Cost Of Living</li>
-            <li>Accomodation</li>
-            <img src="assets/images/Coppercompass logo.png ">
-            <li>NYSC Process</li>
-            <li>Relocation Toolkit</li>
+ <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="index.html" class="logo"
+          ><img src="/assets/images/Rectangle.png" alt="" />CorperCompass</a
+        >
+        <ul>
+          <li>
+            <a href="dashboard.html"
+              ><i class="fa-solid fa-house"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="map.html"><i class="fa-solid fa-earth-africa"></i> Map</a>
+          </li>
+          <li class="active">
+            <a href="culture.html"
+              ><i class="fa-solid fa-book-open"></i> Culture Guide</a
+            >
+          </li>
+          <li>
+            <a href="housing.html">
+              <i class="fa-solid fa-house"></i>Housing</a
+            >
+          </li>
+          <li>
+            <a href="checklist.html"
+              ><i class="fa-regular fa-rectangle-list"></i> Checklist</a
+            >
+          </li>
+          <li>
+            <a href="budget.html"
+              ><i class="fa-solid fa-wallet"></i> Budget Tracker</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a href="settings.html"
+              ><i class="fa-solid fa-gear"></i> Settings</a
+            >
+          </li>
         </ul>
-    </nav>
+      </div>
 
-    <header class="main-section">
-        <h1 class="h1">Culture & Language Guide</h1>
-        <button>Explore Guide</button>
-    </header>
 
-    <main class="main-container">
-        <div>
-            <p class="descriptive-text">Cultural snapshot</p>
-            <img src="assets/images/Frame.png" alt="" class="img-1">
-        </div>
+<!-- LANDING -->
+<div id="landing">
+  <div class="landing-hero">
+    <div class="landing-tag">🌍 Culture &amp; Language Guide</div>
+    <h1>Know Your State<br><span>Before You Arrive</span></h1>
+    <p>Your complete guide to cultural norms, local languages, etiquette, food, and real corper experiences across NYSC deployment states.</p>
+  </div>
+  <div class="state-selector">
+    <div class="state-card" onclick="showCultureTab('snapshot','oyo')">
+      <div class="state-card-img" style="background:linear-gradient(135deg,#1A6B3A,#0d3d21)">🥁</div>
+      <div class="state-card-body">
+        <div class="state-card-zone">South-West</div>
+        <div class="state-card-name">Oyo State</div>
+        <div class="state-card-lang">Yoruba · 33 LGAs</div>
+        <div class="state-card-btn">Explore Guide →</div>
+      </div>
+    </div>
+    <div class="state-card" onclick="showCultureTab('snapshot','enugu')">
+      <div class="state-card-img" style="background:linear-gradient(135deg,#215E3A,#163d26)">⛏️</div>
+      <div class="state-card-body">
+        <div class="state-card-zone">South-East</div>
+        <div class="state-card-name">Enugu State</div>
+        <div class="state-card-lang">Igbo · 17 LGAs</div>
+        <div class="state-card-btn">Explore Guide →</div>
+      </div>
+    </div>
+    <div class="state-card" onclick="showCultureTab('snapshot','kaduna')">
+      <div class="state-card-img" style="background:linear-gradient(135deg,#1d5c3b,#0e2e1d)">🌾</div>
+      <div class="state-card-body">
+        <div class="state-card-zone">North-West</div>
+        <div class="state-card-name">Kaduna State</div>
+        <div class="state-card-lang">Hausa · Multiple LGAs</div>
+        <div class="state-card-btn">Explore Guide →</div>
+      </div>
+    </div>
+  </div>
 
-        <div>
-            <p class="descriptive-text">Language basics</p>
-            <img src="assets/images/Frame (2).png" alt="" class="img-2">
-        </div>
+  <div class="feature-section">
+    <h2>What's Inside the Culture Guide</h2>
+    <p>Everything a corper needs to feel at home from Day 1</p>
+    <div class="feature-grid">
+      <div class="feature-item" onclick="showCultureTab('snapshot','oyo')">
+        <div class="feature-icon">🏛️</div>
+        <h3>Cultural Snapshot</h3>
+        <p>Ethnic groups, religion, dressing norms, greeting culture, taboos, and gender interaction guides by state.</p>
+        <div class="feature-link">Learn more →</div>
+      </div>
+      <div class="feature-item" onclick="showCultureTab('language','oyo')">
+        <div class="feature-icon">🗣️</div>
+        <h3>Language Basics</h3>
+        <p>Essential phrases in Yoruba, Igbo, and Hausa with pronunciation guides, slangs, and when to use them.</p>
+        <div class="feature-link">Learn more →</div>
+      </div>
+      <div class="feature-item" onclick="showCultureTab('tips','oyo')">
+        <div class="feature-icon">💡</div>
+        <h3>Practical Comm. Tips</h3>
+        <p>What to do and what to avoid when interacting with locals, at workplaces, markets, and community spaces.</p>
+        <div class="feature-link">Learn more →</div>
+      </div>
+      <div class="feature-item" onclick="showCultureTab('food','oyo')">
+        <div class="feature-icon">🍲</div>
+        <h3>Food Culture</h3>
+        <p>Iconic local dishes, where to find them, price ranges, and dietary notes every corper should know.</p>
+        <div class="feature-link">Learn more →</div>
+      </div>
+      <div class="feature-item" onclick="showCultureTab('testimonials','oyo')">
+        <div class="feature-icon">💬</div>
+        <h3>Corper Experiences</h3>
+        <p>Real testimonials from corps members who served in each state — what shocked them, what helped them.</p>
+        <div class="feature-link">Learn more →</div>
+      </div>
+      <div class="feature-item" onclick="showCultureTab('snapshot','kaduna')">
+        <div class="feature-icon">🛡️</div>
+        <h3>Safety &amp; Etiquette</h3>
+        <p>Critical safety information, neighbourhood selection advice, and cultural misunderstandings to avoid.</p>
+        <div class="feature-link">Learn more →</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <div>
-            <p class="descriptive-text">Communication tips</p>
-            <img src="assets/images/Frame (1).png" alt="" class="img-3">
-        </div>
-
-        <div class="div">
-            <p class="descriptive-text">Testimonials</p>
-            <img src="assets/images/Firm introduces solution to aid business growth 1.png" alt="" class="img-4">
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="cta-section">
-            <img src="assets/images/Coppercompass logo.png" alt="">
-            <h4>CorperCompass</h4>
-            <div >
-                <p class="footer-text">Structured Relocation Support for NYSC members transitioning to unfamiliar states.
-                    We help corpers find housing insights, understand local culture, plan and budgets navigate their new environment with confidence</p>
-                    <button class="cta-btn">Start Relocation Plan</button>
-                    <button class="nd-cta-btn">Explore Housing</button>
-            </div>
-        </div>
-
-        <div class="footer-container">
-            <ul>
-                <li class="header">RELOCATION TOOLS</li>
-                <li>Home</li>
-                <li>Find Housing</li>
-                <li>Culture and language</li>
-                <li>Budget Estimator</li>
-                <li>Secretariat & lodge Map</li>
-                <li>My Profile</li>
-            </ul>
-
-            <ul>
-                <li class="header">RESOURCES</li>
-                <li>NYSC Process guide</li>
-                <li>Lodge Inspection Tips</li>
-                <li>Relocation Checklist</li>
-                <li>Budget Planning Guide</li>
-                <li>Safety Tips For New States</li>
-            </ul>
-
-            <ul>
-                <li class="header">Support & Help</li>
-                <li>Contact Support</li>
-                <li>Report Lodge Issue</li>
-                <li>Suggest A Lodge</li>
-                <li>FAQs</li>
-            </ul>
-
-            <ul>
-                <li class="header">Emergency Information</li>
-                <li>Emergency Contacts</li>
-                <li>Police Directory</li>
-                <li>Nearby Hospitals</li>
-                <li>NYSC Secretariat</li>
-            </ul>
-
-            <ul>
-                <li class="header">Legal Polices</li>
-                <li>Platform Disclaimer</li>
-                <li>Data & cost Disclaimer</li>
-                <li>Privacy Policy</li>
-                <li>Terms Of Use</li>
-            </ul>
-        </div>
-
-        <p class="disclaimer">CorperCompass is not affiliated with the National Youth service Corps[NYSC]. Accomodation listings are informational only. 
-            No bookings or transactions on this platform is</p>
-        <div class="copyright-info">
-            <p>&copy; 2026 CoperCompass, Inc</p>
-            <ul class="privacy-policy">
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Your Privacy Choices</li>
-            </ul>
-        </div>
-    </footer>
+<!-- CULTURE PAGE -->
+<div id="culturePage" style="display:none">
+  <div class="page-topbar">
+    <button class="tab-btn" id="tab-snapshot" onclick="switchTab('snapshot')">Cultural Snapshot</button>
+    <button class="tab-btn" id="tab-language" onclick="switchTab('language')">Language Basics</button>
+    <button class="tab-btn" id="tab-tips" onclick="switchTab('tips')">Practical Tips</button>
+    <button class="tab-btn" id="tab-food" onclick="switchTab('food')">Food Culture</button>
+    <button class="tab-btn" id="tab-testimonials" onclick="switchTab('testimonials')">Corper Experiences</button>
+  </div>
+  <div class="state-subtabs">
+    <div class="state-tab" id="stab-oyo" onclick="switchState('oyo')">Oyo State</div>
+    <div class="state-tab" id="stab-enugu" onclick="switchState('enugu')">Enugu State</div>
+    <div class="state-tab" id="stab-kaduna" onclick="switchState('kaduna')">Kaduna State</div>
+  </div>
+  <div class="page-content" id="tabContent"></div>
+  <div class="page-footer">
+    <h3>Ready to Relocate with Confidence?</h3>
+    <p>Explore housing, transport, budgeting tools and more on CorperCompass.</p>
+    <button class="btn-primary" onclick="showLanding()">Back to Home</button>
+  </div>
+</div>
 </body>
 </html>

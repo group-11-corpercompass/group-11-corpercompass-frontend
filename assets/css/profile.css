@@ -209,6 +209,19 @@ ul li {
   margin-bottom: 15px;
 }
 
+.card-header button {
+  padding: 6px;
+  border-radius: 3px;
+  background-color: var(--primary);
+  border: none;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.card-header button:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
