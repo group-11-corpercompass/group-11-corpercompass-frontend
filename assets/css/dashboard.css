@@ -68,11 +68,11 @@ button { cursor: pointer; font-family: var(--font); }
 /* ══════════════════════════════════════════════════
    PAGE SHELL
 ══════════════════════════════════════════════════ */
-/* .page-shell {
+ .page-shell {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}*/
+}
 
 /* ══════════════════════════════════════════════════
    TOP NAV
