@@ -68,16 +68,16 @@ button { cursor: pointer; font-family: var(--font); }
 /* ══════════════════════════════════════════════════
    PAGE SHELL
 ══════════════════════════════════════════════════ */
-.page-shell {
+/* .page-shell {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+}*/
 
 /* ══════════════════════════════════════════════════
    TOP NAV
 ══════════════════════════════════════════════════ */
-.top-menu {
+/*.top-menu {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -89,7 +89,7 @@ button { cursor: pointer; font-family: var(--font); }
   gap: 16px;
   padding: 0 28px;
   flex-shrink: 0;
-}
+}*/
 
 /* Logo — fixed width so search aligns with main content */
 .top-menu .logo {
