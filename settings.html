@@ -42,7 +42,7 @@
         <div class="profile-head">
           <img src="assets/images/profile1.png" alt="profile" />
         </div>
-        <p class="profile-name">Adaeze Okonkwo</p>
+        <p class="profile-name"></p>
         <i class="fa-solid fa-angle-down"></i>
       </div>
     </nav>
@@ -159,5 +159,13 @@
         </div>
       </div>
     </section>
+
+    <script>
+
+      const user = JSON.parse(localStorage.getItem("user"));
+      document.querySelector(".profile-name").textContent = user.name;
+
+    </script>
+
   </body>
 </html>
