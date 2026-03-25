@@ -58,7 +58,7 @@
             <ellipse cx="20" cy="36" rx="15" ry="11" fill="#7A5135"/>
           </svg>
         </div>
-        <p class="profile-name">Adaeze Okonkwo</p>
+        <p class="profile-name"></p>
         <i class="fa-solid fa-angle-down"></i>
       </div>
 
@@ -225,5 +225,12 @@
     </div>
   </div>
 
+  <script>
+
+      const user = JSON.parse(localStorage.getItem("user"));
+      document.querySelectorAll(".profile").textContent = user.name;
+
+    </script>
+    
 </body>
 </html>

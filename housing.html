@@ -31,7 +31,7 @@
         </div>
         <div class="user">
           <img src="assets/images/Ellipse 1.png" alt="user" />
-          <p class="Ada">Adaeze Okonkwo</p>
+          <p class="Ada"></p>
           <i class="fa-solid fa-angle-down"></i>
         </div>
       </nav>
@@ -196,5 +196,12 @@
         </div>
       </div>
     </div>
+
+    <script>
+
+      const user = JSON.parse(localStorage.getItem("user"));
+      document.querySelector(".Ada").textContent = user.name;
+
+    </script>
   </body>
 </html>

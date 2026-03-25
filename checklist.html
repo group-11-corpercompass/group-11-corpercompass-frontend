@@ -79,7 +79,7 @@
             <div class="profile">
               <img src="/assets/images/profile1.png" alt="" />
             </div>
-            <p class="profile-name">Adaeze Okonkwo</p>
+            <p class="profile-name"></p>
             <i class="fa-solid fa-angle-down"></i>
           </div>
         </div>
@@ -88,7 +88,7 @@
         <div class="main-grid">
           <!-- Left Section -->
           <div class="left">
-            <h1>Welcome back, Adaeze 👋</h1>
+            <h1>Welcome back, <span class="profile-name"></span> 👋</h1>
             <p>Here's what you've achieved so far</p>
 
             <!-- Completed -->
@@ -121,5 +121,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+
+      const user = JSON.parse(localStorage.getItem("user"));
+      document.querySelectorAll(".profile-name").textContent = user.name;
+
+    </script>
+
   </body>
 </html>
